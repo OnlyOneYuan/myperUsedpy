@@ -156,7 +156,7 @@ class Ucookies:
     
     def getEidOfDiaName(self,name:str):
         url = 'unkown'
-        params = {'method':'doDyncQryData','resTypeId':'9281','dt':int(time.time())}
+        params = {'method':'da','rId':'9281','dt':int(time.time())}
         html = getDIA_UrlInfo(name)
         head = transUrl.initHeaderFromTxt(r'heads\diaStation')
         head['Cookie'] = self.cook
@@ -257,16 +257,6 @@ class ZTE:
         head["Cookie"] = "JSESSIONID=9q2uuw6rcierlrgevzvzo3gl"
         head["Referer"] = "unkwon"
         data = {
-                "itemMap":[
-                    {
-                        "key":"deviceID", 
-                        "value":params["deviceID"]
-                    }, 
-                    {
-                        "key":"tabName", 
-                        "value":""
-                    }
-                ]
             }
         result = put(url=url,params=params,headers = head,json=data)
         return result
@@ -286,19 +276,6 @@ class ZTE:
     def checkBidByMac(self,mac):
         url = 'unkown'
         params = {
-                "data": {"deviceType":"HGW","ruleType":"Mac","ruleValue":mac},
-                "isc_dataFormat": "json",
-                "pageSize": 100,
-                "pageNo": 1,
-                "isc_flag": "smartClient",
-                "_operationType": "fetch",
-                "_startRow": 0,
-                "_endRow": 75,
-                "_sortBy": "lastModifyTime",
-                "_textMatchStyle": "exact",
-                "_componentId": "isc_PageListTable_0",
-                "_dataSource": "cpehg_neal_general_CpeDataSource",
-                "isc_metaDataPrefix": "_"
                 }
         head = transUrl.initHeaderFromTxt(r"heads\macToBid")
         res = get(url,headers=head,params=params)
