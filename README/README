@@ -1,0 +1,15 @@
+﻿this programme is used to solve the automation of liantong information
+in this,i use js|Python to design
+
+the storge file is consist of json and html
+in my plan,every attur will can be use code to search
+and make some way to reduce the time of search
+
+Following is the future i decide to do:
+□ translate .txt into .json or .html
+□ make gui frame(which will be next big major)
+□ reduce duplicate code(through json)
+□ write document to introduce how to use
+□ take a database on nas
+□ etc
+

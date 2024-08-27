@@ -1,0 +1,9 @@
+,kind,code
+onu,onu1st,20001
+,onu2nd,20002
+route,routeAll,20100
+id,eid,20200
+,lid,20201
+udPort,olt,20100
+,uPort,20101
+,dPort,20102
